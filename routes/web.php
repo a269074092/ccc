@@ -17,8 +17,9 @@ use App\Http\Controllers\CounterController;
 Route::get('/', function () {
     return view('counter');
 });
+
 // 获取当前计数
 Route::get('/api/count', 'CounterController@getCount');
-Route::get('/wxtest', 'CounterController@getwx');
+
 // 更新计数，自增或者清零
 Route::post('/api/count', 'CounterController@updateCount');

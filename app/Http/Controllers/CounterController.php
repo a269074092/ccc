@@ -19,9 +19,6 @@ use Illuminate\Support\Facades\Log;
 
 class CounterController extends Controller
 {
-    public function wxtest(){
-        echo 21;
-    }
     /**
      * 获取todo list
      * @return Json
@@ -69,7 +66,7 @@ class CounterController extends Controller
                 }else {
                     $count = $data["count"] + 1;
                 }
-
+    
                 $counters = new Counters;
                 $counters->updateOrCreate(['id' => 1], ["count" => $count]);
             }else if ($action == "clear") {
