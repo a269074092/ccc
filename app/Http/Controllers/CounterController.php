@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Log;
 
 class CounterController extends Controller
 {
+    public function getwx(){
+        return view('counter1');
+    }
+
     /**
      * 获取todo list
      * @return Json
@@ -73,7 +77,7 @@ class CounterController extends Controller
                 Counters::destroy(1);
                 $count = 0;
             }else {
-                throw '参数action错误';
+                //throw '参数action错误';
             }
 
             $res = [
