@@ -62,9 +62,9 @@
         wx.config({
           debug: true, // 调试时可开启
           appId: 'wx35427d448aa7791d', // 开发者公众号appid
-          timestamp: 1677209742, // 必填，填任意数字即可
+          timestamp: {{$timestamp}}, // 必填，填任意数字即可
           nonceStr: 'Wm3WZYTPz0wzccnW', // 必填，填任意非空字符串即可
-          signature: '41e3f9bf056d286c3b86bcf0ded0061649135ede', // 必填，填任意非空字符串即可
+          signature: "{{$signature}}", // 必填，填任意非空字符串即可
           jsApiList: ['chooseImage'], // 安卓上必填一个，随机即可
           openTagList:['wx-open-launch-weapp'], // 填入打开小程序的开放标签名
         })
@@ -183,7 +183,7 @@
 <body>
 <div class="page full">
   <div id="public-web-container" class="hidden">
-    <p class="">正在打开 “小程序示例”...</p>
+    <p class="">$assetClasss正在打开 “小程序示例”...</p>
     <a id="public-web-jump-button" href="javascript:" class="weui-btn weui-btn_primary weui-btn_loading" onclick="openWeapp()">
       <span id="public-web-jump-button-loading" class="weui-primary-loading weui-primary-loading_transparent"><i class="weui-primary-loading__dot"></i></span>
       打开小程序
