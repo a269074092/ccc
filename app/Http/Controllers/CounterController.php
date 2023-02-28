@@ -19,6 +19,9 @@ use Illuminate\Support\Facades\Log;
 
 class CounterController extends Controller
 {
+    public function wxtest() {
+        echo 2;
+    }
     /**
      * 获取todo list
      * @return Json
