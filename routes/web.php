@@ -17,7 +17,9 @@ use App\Http\Controllers\CounterController;
 Route::get('/', function () {
     return view('counter');
 });
-
+Route::get('/cc', function () {
+    return view('counter1');
+});
 // 获取当前计数
 Route::get('/api/count', 'CounterController@getCount');
 
